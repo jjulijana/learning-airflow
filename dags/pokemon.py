@@ -17,11 +17,11 @@ def create_session_with_retries():
     return session
 
 @dag(
-    dag_id="poke_dag",
+    dag_id="pokemon",
     start_date=datetime(2024, 4, 6),
     schedule="@daily",
     catchup=False,
-    default_args={"owner": "Astro", "retries": 5, "retry_delay": timedelta(minutes=5)},  # Using timedelta for retry_delay
+    default_args={"owner": "admin", "retries": 5, "retry_delay": timedelta(minutes=5)},  # Using timedelta for retry_delay
     tags=["pokeapi"],
     doc_md=__doc__,
     render_template_as_native_obj=True,
