@@ -1,0 +1,7 @@
+requests
+pandas
+sqlalchemy
+configparser
+psycopg2-binary
+click
+uproot
